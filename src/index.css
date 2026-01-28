@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --color-maroon: #771313;
+  --color-maroon-dark: #5a0f0f;
+  --color-purple: #4b3342;
+  --color-cream: #e8e4db;
+  --color-cream-light: #f6f3ee;
+  --color-gray: #949494;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
