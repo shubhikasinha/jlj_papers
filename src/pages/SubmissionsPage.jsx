@@ -15,93 +15,69 @@ const SubmissionsPage = () => {
     ]
 
     return (
-        <div className="bg-white min-h-screen">
+        <div style={{ backgroundColor: 'white', minHeight: '100vh' }}>
             {/* Page Title */}
-            <section className="py-6 text-center">
-                <h1 className="text-xl font-serif text-[#4b3342]">Submissions</h1>
+            <section style={{ padding: '1.5rem 1rem', textAlign: 'center' }}>
+                <h1 style={{ fontSize: '28px', fontFamily: 'serif', color: '#4b3342', fontWeight: '500' }}>Submissions</h1>
             </section>
 
             {/* Print & Forum Submissions */}
-            <section className="pb-5">
-                <div className="max-w-2xl mx-auto px-4 text-center">
-                    <h2 className="text-sm font-serif text-[#4b3342] mb-2">Print & Forum Submissions</h2>
-                    <p className="text-[#949494] text-[10px] leading-relaxed">
-                        Submissions to the Journal of Law and Justice follow a rigorous peer review process.
-                        We welcome articles that contribute to legal scholarship across diverse fields including
-                        constitutional law, international law, criminal justice, and emerging areas of legal study.
+            <section style={{ paddingBottom: '1.5rem' }}>
+                <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 1rem', textAlign: 'center' }}>
+                    <h2 style={{ fontSize: '16px', fontFamily: 'serif', color: '#4b3342', marginBottom: '12px', fontWeight: '500' }}>Print & Forum Submissions</h2>
+                    <p style={{ color: '#949494', fontSize: '12px', lineHeight: '1.6' }}>
+                        Submissions to the Journal of Law and Justice follow a rigorous peer review process. We welcome articles that contribute to legal scholarship across diverse fields including constitutional law, international law, criminal justice, and emerging areas of legal study.
                     </p>
                 </div>
             </section>
 
             {/* Submission Guidelines */}
-            <section className="py-5">
-                <div className="max-w-2xl mx-auto px-4">
-                    <h2 className="text-sm font-serif text-[#4b3342] mb-4 text-center">Submission Guidelines</h2>
-                    <ol className="space-y-1.5">
+            <section style={{ padding: '1.5rem 1rem' }}>
+                <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '16px', fontFamily: 'serif', color: '#4b3342', marginBottom: '1rem', textAlign: 'center', fontWeight: '500' }}>Submission Guidelines</h2>
+                    <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                         {submissionGuidelines.map((guideline, index) => (
-                            <li key={index} className="flex gap-2 text-[10px]">
-                                <span className="text-[#771313] font-medium min-w-[14px]">{index + 1}.</span>
-                                <span className="text-[#949494] leading-relaxed">{guideline}</span>
+                            <li key={index} style={{ display: 'flex', gap: '8px', fontSize: '12px' }}>
+                                <span style={{ color: '#771313', fontWeight: '500', minWidth: '20px', flexShrink: 0 }}>{index + 1}.</span>
+                                <span style={{ color: '#949494', lineHeight: '1.6' }}>{guideline}</span>
                             </li>
                         ))}
                     </ol>
 
                     {/* Submit Now Button */}
-                    <div className="text-center mt-6">
+                    <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
                         <Link
                             to="/submit"
-                            className="inline-block bg-[#4b3342] text-white px-5 py-1.5 text-[10px] font-medium hover:bg-[#3a2835] transition-colors"
+                            style={{ display: 'inline-block', backgroundColor: '#4b3342', color: 'white', padding: '8px 20px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', textDecoration: 'none' }}
+                            className="hover:bg-[#3a2835]"
                         >
-                            Submit Now
+                            SUBMIT NOW
                         </Link>
                     </div>
                 </div>
             </section>
 
             {/* Formatting Guidelines */}
-            <section className="py-5 border-t border-[#e8e4db]">
-                <div className="max-w-2xl mx-auto px-4">
-                    <h2 className="text-sm font-serif text-[#4b3342] mb-4 text-center">Formatting Guidelines</h2>
+            <section style={{ padding: '1.5rem 1rem', borderTop: '1px solid #e8e4db' }}>
+                <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '16px', fontFamily: 'serif', color: '#4b3342', marginBottom: '1rem', textAlign: 'center', fontWeight: '500' }}>Formatting Guidelines</h2>
 
-                    <div className="text-[10px] text-[#949494] leading-relaxed space-y-3">
-                        <p>
-                            <span className="text-[#771313] font-medium">1.</span> All citations should follow The Bluebook: A Uniform System of Citation (21st edition).
-                            Use footnotes rather than endnotes.
-                        </p>
-
-                        <p>
-                            <span className="text-[#771313] font-medium">2.</span> Text should be double-spaced in 12-point Times New Roman font with one-inch margins.
-                            Footnotes may be single-spaced.
-                        </p>
-
-                        <p>
-                            <span className="text-[#771313] font-medium">3.</span> Please do not include headers, footers, or page numbers in your submission.
-                        </p>
-
-                        <p>
-                            <span className="text-[#771313] font-medium">4.</span> Tables, figures, and appendices should be submitted as separate files when possible.
-                        </p>
-
-                        <p>
-                            <span className="text-[#771313] font-medium">5.</span> The title page should include: title, author name(s), institutional affiliation(s), and contact information.
-                        </p>
-
-                        <p>
-                            <span className="text-[#771313] font-medium">6.</span> Use American English spelling and punctuation conventions.
-                        </p>
-
-                        <p>
-                            <span className="text-[#771313] font-medium">7.</span> Section headings should follow a consistent hierarchy: Roman numerals for main sections.
-                        </p>
-
-                        <p>
-                            <span className="text-[#771313] font-medium">8.</span> Authors are responsible for obtaining permission to reproduce any copyrighted material.
-                        </p>
-                    </div>
-
-                    {/* Contact */}
-                    <div className="mt-6 text-[10px] text-[#949494]">
-                        Questions? Contact: <a href="mailto:submissions@jlj.org" className="text-[#771313] hover:underline">submissions@jlj.org</a>
+                    <div style={{ fontSize: '12px', color: '#949494', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                        {[
+                            'All citations should follow The Bluebook: A Uniform System of Citation (21st edition). Use footnotes rather than endnotes.',
+                            'Text should be double-spaced in 12-point Times New Roman font with one-inch margins. Footnotes may be single-spaced.',
+                            'Please do not include headers, footers, or page numbers in your submission.',
+                            'Tables, figures, and appendices should be submitted as separate files when possible.',
+                            'The title page should include: title, author name(s), institutional affiliation(s), and contact information.',
+                            'Use American English spelling and punctuation conventions.',
+                            'Section headings should follow a consistent hierarchy: Roman numerals for main sections.',
+                            'Authors are responsible for obtaining permission to reproduce any copyrighted material.',
+                        ].map((guideline, index) => (
+                            <p key={index}>
+                                <span style={{ color: '#771313', fontWeight: '500', marginRight: '8px' }}>{index + 1}.</span>
+                                {guideline}
+                            </p>
+                        ))}
                     </div>
                 </div>
             </section>

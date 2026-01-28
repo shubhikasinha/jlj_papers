@@ -2,48 +2,48 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <footer className="bg-[#771313] text-white">
-            <div className="max-w-5xl mx-auto px-4 py-8">
-                <div className="grid grid-cols-3 gap-8">
+        <footer style={{ backgroundColor: '#771313', color: 'white', marginTop: 'auto' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem' }}>
                     {/* Archives */}
                     <div>
-                        <h3 className="text-sm font-medium mb-3">Archives</h3>
-                        <ul className="space-y-1.5 text-[10px] text-white/80">
-                            <li><Link to="/print" className="hover:text-white">PRINT</Link></li>
-                            <li><Link to="/forum" className="hover:text-white">FORUM</Link></li>
-                            <li><Link to="/blog" className="hover:text-white">BLOG</Link></li>
-                            <li><Link to="/subscribe" className="text-white hover:underline">SUBSCRIBE →</Link></li>
+                        <h3 style={{ fontSize: '14px', fontWeight: '500', marginBottom: '12px' }}>Archives</h3>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                            <li><Link to="/print" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">PRINT</Link></li>
+                            <li><Link to="/forum" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">FORUM</Link></li>
+                            <li><Link to="/blog" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">BLOG</Link></li>
+                            <li><Link to="/subscribe" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">SUBSCRIBE →</Link></li>
                         </ul>
                     </div>
 
                     {/* Fellowship */}
                     <div>
-                        <h3 className="text-sm font-medium mb-3">Fellowship</h3>
-                        <ul className="space-y-1.5 text-[10px] text-white/80">
-                            <li><Link to="/about-fellowship" className="hover:text-white">ABOUT</Link></li>
-                            <li><Link to="/fellowship-essays" className="hover:text-white">FELLOWSHIP ESSAYS</Link></li>
-                            <li><Link to="/fellows" className="hover:text-white">MEET THE FELLOWS</Link></li>
-                            <li><Link to="/apply" className="text-white hover:underline">APPLY →</Link></li>
+                        <h3 style={{ fontSize: '14px', fontWeight: '500', marginBottom: '12px' }}>Fellowship</h3>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                            <li><Link to="/about-fellowship" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">ABOUT</Link></li>
+                            <li><Link to="/fellowship-essays" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">FELLOWSHIP ESSAYS</Link></li>
+                            <li><Link to="/fellows" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">MEET THE FELLOWS</Link></li>
+                            <li><Link to="/apply" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">APPLY →</Link></li>
                         </ul>
                     </div>
 
                     {/* About */}
                     <div>
-                        <h3 className="text-sm font-medium mb-3">About</h3>
-                        <ul className="space-y-1.5 text-[10px] text-white/80">
-                            <li><Link to="/board" className="hover:text-white underline">BOARD OF EDITORS</Link></li>
-                            <li><Link to="/history" className="hover:text-white">ORGANIZATION & HISTORY</Link></li>
-                            <li><Link to="/submit" className="hover:text-white underline">SUBMIT</Link></li>
-                            <li><Link to="/writing-competition" className="text-white hover:underline">WRITING COMPETITION →</Link></li>
+                        <h3 style={{ fontSize: '14px', fontWeight: '500', marginBottom: '12px' }}>About</h3>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                            <li><Link to="/board" style={{ color: 'white', fontSize: '10px', textDecoration: 'underline' }} className="hover:text-opacity-80">BOARD OF EDITORS</Link></li>
+                            <li><Link to="/history" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">ORGANIZATION & HISTORY</Link></li>
+                            <li><Link to="/submit" style={{ color: 'white', fontSize: '10px', textDecoration: 'underline' }} className="hover:text-opacity-80">SUBMIT</Link></li>
+                            <li><Link to="/writing-competition" style={{ color: 'white', fontSize: '10px', textDecoration: 'none' }} className="hover:underline">WRITING COMPETITION →</Link></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             {/* Copyright */}
-            <div className="border-t border-white/20 py-4">
-                <div className="max-w-5xl mx-auto px-4 text-center text-[10px] text-white/70">
-                    Copyright © 1887-2026 Harvard Law Review. All Rights Reserved. <span className="underline cursor-pointer">Accessibility</span>.
+            <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.2)', padding: '1rem' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem', textAlign: 'center', fontSize: '10px', color: 'rgba(255, 255, 255, 0.7)' }}>
+                    Copyright © 1887-2026 Harvard Law Review. All Rights Reserved. <span style={{ textDecoration: 'underline', cursor: 'pointer' }}>Accessibility</span>.
                 </div>
             </div>
         </footer>

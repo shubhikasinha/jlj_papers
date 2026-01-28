@@ -87,40 +87,37 @@ const HomePage = () => {
     return (
         <div className="bg-white">
             {/* Hero Section - Featured Article */}
-            <section className="bg-[#e8e4db] py-8">
-                <div className="max-w-3xl mx-auto px-4">
-                    <div className="bg-white border border-gray-300 p-6">
+            <section style={{ backgroundColor: '#e8e4db', padding: '2rem 1rem' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <div style={{ backgroundColor: 'white', border: '1px solid #ddd', padding: '1.5rem', maxWidth: '600px', margin: '0 auto' }}>
                         {/* Diamond Icon */}
-                        <div className="flex justify-center mb-3">
-                            <svg className="w-3 h-3 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
+                        <div style={{ textAlign: 'center', marginBottom: '12px' }}>
+                            <svg style={{ width: '12px', height: '12px', color: '#999', margin: '0 auto' }} viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2l4 8-4 8-4-8z" />
                             </svg>
                         </div>
-                        <p className="text-[#771313] text-[10px] font-bold tracking-widest text-center mb-2">SUPREME COURT</p>
-                        <h1 className="text-xl font-serif text-[#4b3342] text-center mb-3">
+                        <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.1em', textAlign: 'center', marginBottom: '8px' }}>SUPREME COURT</p>
+                        <h1 style={{ fontSize: '20px', fontFamily: 'serif', color: '#4b3342', textAlign: 'center', marginBottom: '12px' }}>
                             Practical Consequences in Statutory Interpretation
                         </h1>
-                        <p className="text-[#949494] text-xs text-center leading-relaxed">
-                            Modern textualism has long criticized the use of practical, or consequentialist,
-                            reasoning when construing statutes. And yet in practice, textualist jurists long
-                            have invoked practical consequences arguments to help justify their statutory
-                            constructions.
+                        <p style={{ color: '#949494', fontSize: '12px', textAlign: 'center', lineHeight: '1.6' }}>
+                            Modern textualism has long criticized the use of practical, or consequentialist, reasoning when construing statutes. And yet in practice, textualist jurists long have invoked practical consequences arguments to help justify their statutory constructions.
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* Appendix Articles Grid */}
-            <section className="py-8 border-b border-gray-200">
-                <div className="max-w-5xl mx-auto px-4">
-                    <div className="grid grid-cols-2 gap-x-10 gap-y-8">
+            <section style={{ padding: '2rem 1rem', borderBottom: '1px solid #ddd' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                         {appendixArticles.map((article, index) => (
-                            <div key={index} className="border-t-2 border-gray-200 pt-4">
-                                <p className="text-[#949494] text-[9px] font-medium tracking-widest mb-2">{article.category}</p>
-                                <h3 className="text-base font-serif text-[#4b3342] mb-2 leading-snug hover:text-[#771313] cursor-pointer">
+                            <div key={index} style={{ borderTop: '2px solid #ddd', paddingTop: '1rem' }}>
+                                <p style={{ color: '#949494', fontSize: '9px', fontWeight: '500', letterSpacing: '0.1em', marginBottom: '8px' }}>{article.category}</p>
+                                <h3 style={{ fontSize: '16px', fontFamily: 'serif', color: '#4b3342', marginBottom: '8px', cursor: 'pointer', fontWeight: '500' }} className="hover:text-[#771313]">
                                     {article.title}
                                 </h3>
-                                <p className="text-[#949494] text-[9px] leading-relaxed">
+                                <p style={{ color: '#949494', fontSize: '9px', lineHeight: '1.5' }}>
                                     {article.description}
                                 </p>
                             </div>
@@ -130,20 +127,20 @@ const HomePage = () => {
             </section>
 
             {/* Recent Cases */}
-            <section className="py-8 border-b border-gray-200">
-                <div className="max-w-5xl mx-auto px-4">
-                    <div className="grid grid-cols-2 gap-x-10 gap-y-6">
+            <section style={{ padding: '2rem 1rem', borderBottom: '1px solid #ddd' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                         {recentCases.map((item, index) => (
                             <div key={index}>
-                                <p className="text-[9px] mb-1">
-                                    <span className="text-[#771313] font-bold tracking-wide">{item.category}</span>
-                                    <span className="text-[#949494]"> • </span>
-                                    <span className="text-[#949494] tracking-wide">{item.type}</span>
+                                <p style={{ fontSize: '9px', marginBottom: '4px' }}>
+                                    <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>{item.category}</span>
+                                    <span style={{ color: '#949494' }}> • </span>
+                                    <span style={{ color: '#949494', letterSpacing: '0.05em' }}>{item.type}</span>
                                 </p>
-                                <h3 className="text-sm font-serif text-[#4b3342] mb-1 leading-snug hover:text-[#771313] cursor-pointer font-medium">
+                                <h3 style={{ fontSize: '14px', fontFamily: 'serif', color: '#4b3342', marginBottom: '4px', cursor: 'pointer', fontWeight: '500' }} className="hover:text-[#771313]">
                                     {item.title}
                                 </h3>
-                                <p className="text-[#949494] text-[9px] leading-relaxed">
+                                <p style={{ color: '#949494', fontSize: '9px', lineHeight: '1.5' }}>
                                     {item.description}
                                 </p>
                             </div>
@@ -153,45 +150,43 @@ const HomePage = () => {
             </section>
 
             {/* About the JLJ Call For Paper Review */}
-            <section className="py-10 bg-white">
-                <div className="max-w-4xl mx-auto px-4">
-                    <h2 className="text-2xl font-serif text-[#4b3342] text-center mb-4">
-                        About the <span className="italic text-[#771313]">JLJ</span> Call For Paper Review
+            <section style={{ padding: '2.5rem 1rem', backgroundColor: '#f5f5f5' }}>
+                <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '24px', fontFamily: 'serif', color: '#4b3342', textAlign: 'center', marginBottom: '1rem' }}>
+                        About the <span style={{ fontStyle: 'italic', color: '#771313' }}>JLJ</span> Call For Paper Review
                     </h2>
-                    <p className="text-[#949494] text-xs text-center leading-relaxed mb-6 max-w-3xl mx-auto">
-                        The JLJ is a student-run journal of legal scholarship. The <span className="italic">Review</span> is independent from
-                        the Delhi University and a <span className="text-[#771313] underline cursor-pointer">board of student editors</span> selected through an anonymous annual writing competition
-                        make all editorial decisions. The print <span className="italic">Review</span> and its online companion, the <span className="italic">Forum</span>, are published monthly from
-                        November through June. The <span className="italic text-[#771313]">Review</span>, the <span className="italic text-[#771313]">Forum</span>, and online<span className="italic text-[#771313]">Blog</span> welcome submissions throughout the year.
+                    <p style={{ color: '#949494', fontSize: '12px', textAlign: 'center', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+                        The JLJ is a student-run journal of legal scholarship. The <span style={{ fontStyle: 'italic' }}>Review</span> is independent from the Delhi University and a <span style={{ color: '#771313', textDecoration: 'underline', cursor: 'pointer' }}>board of student editors</span> selected through an anonymous annual writing competition make all editorial decisions. The print <span style={{ fontStyle: 'italic' }}>Review</span> and its online companion, the <span style={{ fontStyle: 'italic' }}>Forum</span>, are published monthly from November through June. The <span style={{ fontStyle: 'italic', color: '#771313' }}>Review</span>, the <span style={{ fontStyle: 'italic', color: '#771313' }}>Forum</span>, and online<span style={{ fontStyle: 'italic', color: '#771313' }}>Blog</span> welcome submissions throughout the year.
                     </p>
 
                     {/* Action Buttons */}
-                    <div className="flex justify-center gap-2 mb-6">
-                        <Link to="/submissions" className="bg-[#4b3342] text-white px-4 py-2 text-[10px] font-bold tracking-wider hover:bg-[#3a2835]">
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                        <Link to="/submissions" style={{ backgroundColor: '#4b3342', color: 'white', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', textDecoration: 'none' }} className="hover:bg-[#3a2835]">
                             SUBMISSIONS
                         </Link>
-                        <button className="border border-[#4b3342] text-[#4b3342] px-4 py-2 text-[10px] font-bold tracking-wider hover:bg-gray-50">
+                        <button style={{ border: '1px solid #4b3342', color: '#4b3342', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }} className="hover:bg-gray-50">
                             SUBSCRIPTIONS
                         </button>
-                        <button className="border border-[#4b3342] text-[#4b3342] px-4 py-2 text-[10px] font-bold tracking-wider hover:bg-gray-50">
+                        <button style={{ border: '1px solid #4b3342', color: '#4b3342', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }} className="hover:bg-gray-50">
                             FELLOWSHIPS
                         </button>
-                        <button className="border border-[#4b3342] text-[#4b3342] px-4 py-2 text-[10px] font-bold tracking-wider hover:bg-gray-50">
+                        <button style={{ border: '1px solid #4b3342', color: '#4b3342', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }} className="hover:bg-gray-50">
                             WRITING COMPETITION
                         </button>
-                        <button className="border border-[#4b3342] text-[#4b3342] px-4 py-2 text-[10px] font-bold tracking-wider hover:bg-gray-50">
+                        <button style={{ border: '1px solid #4b3342', color: '#4b3342', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }} className="hover:bg-gray-50">
                             THE BLUEBOOK®
                         </button>
                     </div>
 
                     {/* Email Signup */}
-                    <div className="flex max-w-lg mx-auto">
+                    <div style={{ display: 'flex', maxWidth: '500px', margin: '0 auto' }}>
                         <input
                             type="email"
                             placeholder="Join our mailing list"
-                            className="flex-1 px-3 py-2 border border-gray-300 text-xs focus:outline-none focus:border-[#771313]"
+                            style={{ flex: 1, padding: '8px 12px', border: '1px solid #ddd', fontSize: '12px' }}
+                            className="focus:outline-none focus:border-[#771313]"
                         />
-                        <button className="bg-[#4b3342] text-white px-4 py-2 text-[10px] font-bold tracking-wider hover:bg-[#3a2835]">
+                        <button style={{ backgroundColor: '#4b3342', color: 'white', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', cursor: 'pointer' }} className="hover:bg-[#3a2835]">
                             SIGN UP
                         </button>
                     </div>
@@ -199,55 +194,55 @@ const HomePage = () => {
             </section>
 
             {/* Forum & Blog Section */}
-            <section className="py-10 border-t border-gray-200">
-                <div className="max-w-5xl mx-auto px-4">
-                    <div className="grid grid-cols-2 gap-16">
+            <section style={{ padding: '2rem 1rem', borderTop: '1px solid #ddd' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
                         {/* Forum Column */}
                         <div>
-                            <h2 className="text-2xl font-serif text-[#4b3342] mb-6 border-t-2 border-[#771313] pt-2 inline-block">Forum</h2>
-                            <div className="space-y-5">
+                            <h2 style={{ fontSize: '24px', fontFamily: 'serif', color: '#4b3342', marginBottom: '1.5rem', borderTop: '2px solid #771313', paddingTop: '8px', display: 'inline-block' }}>Forum</h2>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                                 {forumArticles.map((article, index) => (
                                     <div key={index}>
-                                        <p className="text-[9px] mb-0.5">
-                                            <span className="text-[#771313] font-bold tracking-wide">{article.category}</span>
-                                            <span className="text-[#949494]"> • </span>
-                                            <span className="text-[#949494] tracking-wide">{article.type}</span>
+                                        <p style={{ fontSize: '9px', marginBottom: '4px' }}>
+                                            <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>{article.category}</span>
+                                            <span style={{ color: '#949494' }}> • </span>
+                                            <span style={{ color: '#949494', letterSpacing: '0.05em' }}>{article.type}</span>
                                         </p>
-                                        <h3 className="text-sm font-serif text-[#4b3342] font-medium hover:text-[#771313] cursor-pointer">
+                                        <h3 style={{ fontSize: '14px', fontFamily: 'serif', color: '#4b3342', fontWeight: '500', cursor: 'pointer' }} className="hover:text-[#771313]">
                                             {article.title}
                                         </h3>
                                         {article.subtitle && (
-                                            <p className="text-[9px] text-[#949494] italic">{article.subtitle}</p>
+                                            <p style={{ fontSize: '9px', color: '#949494', fontStyle: 'italic' }}>{article.subtitle}</p>
                                         )}
-                                        <p className="text-[#771313] text-[9px] font-medium tracking-wide mt-0.5">{article.author}</p>
+                                        <p style={{ color: '#771313', fontSize: '9px', fontWeight: '500', letterSpacing: '0.05em', marginTop: '4px' }}>{article.author}</p>
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-[#771313] text-[10px] font-bold tracking-wider mt-6 cursor-pointer hover:underline">
+                            <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', marginTop: '1.5rem', cursor: 'pointer' }} className="hover:underline">
                                 MORE FROM THE FORUM →
                             </p>
                         </div>
 
                         {/* Blog Column */}
                         <div>
-                            <h2 className="text-2xl font-serif text-[#771313] mb-6 border-t-2 border-[#771313] pt-2 inline-block">Blog</h2>
-                            <div className="space-y-5">
+                            <h2 style={{ fontSize: '24px', fontFamily: 'serif', color: '#771313', marginBottom: '1.5rem', borderTop: '2px solid #771313', paddingTop: '8px', display: 'inline-block' }}>Blog</h2>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                                 {blogArticles.map((article, index) => (
                                     <div key={index}>
-                                        <p className="text-[9px] mb-0.5">
-                                            <span className="text-[#771313] font-bold tracking-wide">{article.category}</span>
-                                            <span className="text-[#949494]"> • </span>
-                                            <span className="text-[#949494] tracking-wide">{article.type}</span>
+                                        <p style={{ fontSize: '9px', marginBottom: '4px' }}>
+                                            <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>{article.category}</span>
+                                            <span style={{ color: '#949494' }}> • </span>
+                                            <span style={{ color: '#949494', letterSpacing: '0.05em' }}>{article.type}</span>
                                         </p>
-                                        <h3 className="text-sm font-serif text-[#4b3342] font-medium hover:text-[#771313] cursor-pointer">
+                                        <h3 style={{ fontSize: '14px', fontFamily: 'serif', color: '#4b3342', fontWeight: '500', cursor: 'pointer' }} className="hover:text-[#771313]">
                                             {article.title}
                                         </h3>
-                                        <p className="text-[9px] text-[#949494] mt-0.5">{article.date}</p>
-                                        <p className="text-[#771313] text-[9px] font-medium tracking-wide">{article.author}</p>
+                                        <p style={{ fontSize: '9px', color: '#949494', marginTop: '4px' }}>{article.date}</p>
+                                        <p style={{ color: '#771313', fontSize: '9px', fontWeight: '500', letterSpacing: '0.05em' }}>{article.author}</p>
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-[#771313] text-[10px] font-bold tracking-wider mt-6 cursor-pointer hover:underline">
+                            <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', marginTop: '1.5rem', cursor: 'pointer' }} className="hover:underline">
                                 MORE FROM THE BLOG →
                             </p>
                         </div>
@@ -256,136 +251,132 @@ const HomePage = () => {
             </section>
 
             {/* Explore Section */}
-            <section className="py-10 bg-[#f6f3ee]">
-                <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-2xl font-serif text-[#4b3342] mb-5">Explore</h2>
-                    <div className="flex justify-center flex-wrap gap-2 mb-4">
+            <section style={{ padding: '2.5rem 1rem', backgroundColor: '#f6f3ee', textAlign: 'center' }}>
+                <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '24px', fontFamily: 'serif', color: '#4b3342', marginBottom: '1.5rem' }}>Explore</h2>
+                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '1.5rem' }}>
                         {exploreTopics.map((topic, index) => (
                             <button
                                 key={index}
-                                className="px-4 py-1.5 border border-[#4b3342] text-[10px] text-[#4b3342] font-bold tracking-wider hover:bg-[#4b3342] hover:text-white transition-colors"
+                                style={{ padding: '8px 16px', border: '1px solid #4b3342', fontSize: '10px', color: '#4b3342', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }}
+                                className="hover:bg-[#4b3342] hover:text-white"
                             >
                                 {topic}
                             </button>
                         ))}
                     </div>
-                    <div className="flex justify-center gap-4">
-                        <span className="text-[#771313] text-[10px] font-bold tracking-wider cursor-pointer hover:underline">ALL TOPICS →</span>
-                        <span className="text-[#771313] text-[10px] font-bold tracking-wider cursor-pointer hover:underline">ALL AUTHORS →</span>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+                        <span style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', cursor: 'pointer' }} className="hover:underline">ALL TOPICS →</span>
+                        <span style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', cursor: 'pointer' }} className="hover:underline">ALL AUTHORS →</span>
                     </div>
                 </div>
             </section>
 
             {/* More from the Archives */}
-            <section className="py-10 bg-white">
-                <div className="max-w-5xl mx-auto px-4">
-                    <h2 className="text-2xl font-serif text-[#4b3342] text-center mb-8">More from the Archives</h2>
+            <section style={{ padding: '2.5rem 1rem', backgroundColor: 'white' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '24px', fontFamily: 'serif', color: '#4b3342', textAlign: 'center', marginBottom: '2rem' }}>More from the Archives</h2>
 
                     {/* Articles */}
-                    <div className="mb-8">
-                        <h3 className="text-lg font-serif text-[#4b3342] italic mb-4">Articles</h3>
-                        <div className="grid grid-cols-2 gap-x-10 gap-y-4">
+                    <div style={{ marginBottom: '2rem' }}>
+                        <h3 style={{ fontSize: '18px', fontFamily: 'serif', color: '#4b3342', fontStyle: 'italic', marginBottom: '1rem' }}>Articles</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                             {archiveArticles.map((article, index) => (
                                 <div key={index}>
-                                    <p className="text-[9px] mb-0.5">
-                                        <span className="text-[#771313] font-bold tracking-wide">{article.category}</span>
-                                        <span className="text-[#949494]"> • </span>
-                                        <span className="text-[#949494] tracking-wide">{article.type}</span>
+                                    <p style={{ fontSize: '9px', marginBottom: '4px' }}>
+                                        <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>{article.category}</span>
+                                        <span style={{ color: '#949494' }}> • </span>
+                                        <span style={{ color: '#949494', letterSpacing: '0.05em' }}>{article.type}</span>
                                     </p>
-                                    <h4 className="text-sm font-serif text-[#4b3342] font-medium hover:text-[#771313] cursor-pointer">{article.title}</h4>
-                                    <p className="text-[#949494] text-[9px] tracking-wide">{article.author}</p>
+                                    <h4 style={{ fontSize: '14px', fontFamily: 'serif', color: '#4b3342', fontWeight: '500', cursor: 'pointer' }} className="hover:text-[#771313]">{article.title}</h4>
+                                    <p style={{ color: '#949494', fontSize: '9px', letterSpacing: '0.05em' }}>{article.author}</p>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[#771313] text-[10px] font-bold tracking-wider mt-3 cursor-pointer hover:underline">MORE ARTICLES →</p>
+                        <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', marginTop: '1rem', cursor: 'pointer' }} className="hover:underline">MORE ARTICLES →</p>
                     </div>
 
                     {/* Essays */}
-                    <div className="mb-8">
-                        <h3 className="text-lg font-serif text-[#4b3342] italic mb-4">Essays</h3>
-                        <div className="grid grid-cols-2 gap-x-10">
+                    <div style={{ marginBottom: '2rem' }}>
+                        <h3 style={{ fontSize: '18px', fontFamily: 'serif', color: '#4b3342', fontStyle: 'italic', marginBottom: '1rem' }}>Essays</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                             {essays.map((article, index) => (
                                 <div key={index}>
-                                    <p className="text-[9px] mb-0.5">
-                                        <span className="text-[#771313] font-bold tracking-wide">{article.category}</span>
-                                        <span className="text-[#949494]"> • </span>
-                                        <span className="text-[#949494] tracking-wide">{article.type}</span>
+                                    <p style={{ fontSize: '9px', marginBottom: '4px' }}>
+                                        <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>{article.category}</span>
+                                        <span style={{ color: '#949494' }}> • </span>
+                                        <span style={{ color: '#949494', letterSpacing: '0.05em' }}>{article.type}</span>
                                     </p>
-                                    <h4 className="text-sm font-serif text-[#4b3342] font-medium hover:text-[#771313] cursor-pointer">{article.title}</h4>
-                                    <p className="text-[#949494] text-[9px] tracking-wide">{article.author}</p>
+                                    <h4 style={{ fontSize: '14px', fontFamily: 'serif', color: '#4b3342', fontWeight: '500', cursor: 'pointer' }} className="hover:text-[#771313]">{article.title}</h4>
+                                    <p style={{ color: '#949494', fontSize: '9px', letterSpacing: '0.05em' }}>{article.author}</p>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[#771313] text-[10px] font-bold tracking-wider mt-3 cursor-pointer hover:underline">MORE ESSAYS →</p>
+                        <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', marginTop: '1rem', cursor: 'pointer' }} className="hover:underline">MORE ESSAYS →</p>
                     </div>
 
                     {/* Book Reviews */}
-                    <div className="mb-8">
-                        <h3 className="text-lg font-serif text-[#4b3342] italic mb-4">Book Reviews</h3>
-                        <div className="grid grid-cols-2 gap-x-10">
+                    <div style={{ marginBottom: '2rem' }}>
+                        <h3 style={{ fontSize: '18px', fontFamily: 'serif', color: '#4b3342', fontStyle: 'italic', marginBottom: '1rem' }}>Book Reviews</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                             {bookReviews.map((article, index) => (
                                 <div key={index}>
-                                    <p className="text-[9px] mb-0.5">
-                                        <span className="text-[#771313] font-bold tracking-wide">{article.category}</span>
-                                        <span className="text-[#949494]"> • </span>
-                                        <span className="text-[#949494] tracking-wide">{article.type}</span>
+                                    <p style={{ fontSize: '9px', marginBottom: '4px' }}>
+                                        <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>{article.category}</span>
+                                        <span style={{ color: '#949494' }}> • </span>
+                                        <span style={{ color: '#949494', letterSpacing: '0.05em' }}>{article.type}</span>
                                     </p>
-                                    <h4 className="text-sm font-serif text-[#4b3342] font-medium hover:text-[#771313] cursor-pointer">{article.title}</h4>
-                                    <p className="text-[#949494] text-[9px] tracking-wide">{article.author}</p>
+                                    <h4 style={{ fontSize: '14px', fontFamily: 'serif', color: '#4b3342', fontWeight: '500', cursor: 'pointer' }} className="hover:text-[#771313]">{article.title}</h4>
+                                    <p style={{ color: '#949494', fontSize: '9px', letterSpacing: '0.05em' }}>{article.author}</p>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[#771313] text-[10px] font-bold tracking-wider mt-3 cursor-pointer hover:underline">MORE BOOK REVIEWS →</p>
+                        <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', marginTop: '1rem', cursor: 'pointer' }} className="hover:underline">MORE BOOK REVIEWS →</p>
                     </div>
 
                     {/* Tributes */}
-                    <div className="mb-8">
-                        <h3 className="text-lg font-serif text-[#4b3342] italic mb-4">Tributes</h3>
-                        <div className="grid grid-cols-2 gap-x-10">
+                    <div>
+                        <h3 style={{ fontSize: '18px', fontFamily: 'serif', color: '#4b3342', fontStyle: 'italic', marginBottom: '1rem' }}>Tributes</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                             {tributes.map((article, index) => (
                                 <div key={index}>
-                                    <p className="text-[9px] mb-0.5">
-                                        <span className="text-[#771313] font-bold tracking-wide">{article.category}</span>
-                                        <span className="text-[#949494]"> • </span>
-                                        <span className="text-[#949494] tracking-wide">{article.type}</span>
+                                    <p style={{ fontSize: '9px', marginBottom: '4px' }}>
+                                        <span style={{ color: '#771313', fontWeight: 'bold', letterSpacing: '0.05em' }}>{article.category}</span>
+                                        <span style={{ color: '#949494' }}> • </span>
+                                        <span style={{ color: '#949494', letterSpacing: '0.05em' }}>{article.type}</span>
                                     </p>
-                                    <h4 className="text-sm font-serif text-[#4b3342] font-medium hover:text-[#771313] cursor-pointer">{article.title}</h4>
-                                    {article.authors && <p className="text-[#771313] text-[8px] tracking-wide">{article.authors}</p>}
+                                    <h4 style={{ fontSize: '14px', fontFamily: 'serif', color: '#4b3342', fontWeight: '500', cursor: 'pointer' }} className="hover:text-[#771313]">{article.title}</h4>
+                                    {article.authors && <p style={{ color: '#771313', fontSize: '8px', letterSpacing: '0.05em' }}>{article.authors}</p>}
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[#771313] text-[10px] font-bold tracking-wider mt-3 cursor-pointer hover:underline">MORE TRIBUTES →</p>
+                        <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', marginTop: '1rem', cursor: 'pointer' }} className="hover:underline">MORE TRIBUTES →</p>
                     </div>
                 </div>
             </section>
 
             {/* Fellowships Section */}
-            <section className="py-10 bg-[#e8e4db]">
-                <div className="max-w-3xl mx-auto px-4">
-                    <div className="bg-white border border-gray-300 p-6">
+            <section style={{ padding: '2.5rem 1rem', backgroundColor: '#e8e4db' }}>
+                <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                    <div style={{ backgroundColor: 'white', border: '1px solid #ddd', padding: '1.5rem' }}>
                         {/* Diamond Icon */}
-                        <div className="flex justify-center mb-3">
-                            <svg className="w-3 h-3 text-[#b8860b]" viewBox="0 0 24 24" fill="currentColor">
+                        <div style={{ textAlign: 'center', marginBottom: '12px' }}>
+                            <svg style={{ width: '12px', height: '12px', color: '#b8860b', margin: '0 auto' }} viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2l4 8-4 8-4-8z" />
                             </svg>
                         </div>
-                        <p className="text-[#771313] text-[10px] font-bold tracking-widest text-center mb-3">FELLOWSHIPS</p>
-                        <p className="text-[#949494] text-xs text-center leading-relaxed mb-4">
-                            The Journal for Law and Justice (JLJ) is the flagship student-run publication of Law
-                            Centre-II, Faculty of Law, University of Delhi. It is an open-access, double blind peer
-                            reviewed academic journal dedicated to publishing original and high-quality research in
-                            the field of law and justice. The journal seeks to foster dialogue on pressing legal issues,
-                            encourage critical engagement with doctrines and practices, and contribute to the
-                            evolving discourse on justice, governance, and rights in India and beyond.
+                        <p style={{ color: '#771313', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.1em', textAlign: 'center', marginBottom: '12px' }}>FELLOWSHIPS</p>
+                        <p style={{ color: '#949494', fontSize: '12px', textAlign: 'center', lineHeight: '1.6', marginBottom: '1rem' }}>
+                            The Journal for Law and Justice (JLJ) is the flagship student-run publication of Law Centre-II, Faculty of Law, University of Delhi. It is an open-access, double blind peer reviewed academic journal dedicated to publishing original and high-quality research in the field of law and justice. The journal seeks to foster dialogue on pressing legal issues, encourage critical engagement with doctrines and practices, and contribute to the evolving discourse on justice, governance, and rights in India and beyond.
                         </p>
-                        <div className="flex justify-center gap-2">
-                            <button className="border border-[#4b3342] text-[#4b3342] px-4 py-1.5 text-[10px] font-bold tracking-wider hover:bg-gray-50">
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                            <button style={{ border: '1px solid #4b3342', color: '#4b3342', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }} className="hover:bg-gray-50">
                                 LEARN MORE
                             </button>
-                            <button className="border border-[#4b3342] text-[#4b3342] px-4 py-1.5 text-[10px] font-bold tracking-wider hover:bg-gray-50">
+                            <button style={{ border: '1px solid #4b3342', color: '#4b3342', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }} className="hover:bg-gray-50">
                                 CURRENT & PAST FELLOWS
                             </button>
-                            <button className="border border-[#4b3342] text-[#4b3342] px-4 py-1.5 text-[10px] font-bold tracking-wider hover:bg-gray-50">
+                            <button style={{ border: '1px solid #4b3342', color: '#4b3342', padding: '8px 12px', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.05em', backgroundColor: 'white', cursor: 'pointer' }} className="hover:bg-gray-50">
                                 FELLOWSHIP ESSAYS
                             </button>
                         </div>
@@ -394,34 +385,31 @@ const HomePage = () => {
             </section>
 
             {/* Recently Cited Section */}
-            <section className="py-10 bg-[#f6f3ee]">
-                <div className="max-w-5xl mx-auto px-4">
-                    <div className="flex gap-10">
-                        {/* Logo Image */}
-                        <div className="w-48 flex-shrink-0">
-                            <img src="/logo.png" alt="Law Centre - II" className="w-full" />
-                        </div>
+            <section style={{ padding: '2.5rem 1rem', backgroundColor: '#f6f3ee' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '2.5rem' }}>
+                    {/* Logo Image */}
+                    <div style={{ width: '200px', flexShrink: 0 }}>
+                        <img src="/logo.png" alt="Law Centre - II" style={{ width: '100%' }} />
+                    </div>
 
-                        {/* Recently Cited Content */}
-                        <div className="flex-1">
-                            <h2 className="text-2xl font-serif text-[#4b3342] mb-2">Recently Cited</h2>
-                            <p className="text-[#949494] text-xs mb-6">
-                                The student pieces featured below have been recently cited in
-                                judicial opinions and legal scholarship.
-                            </p>
+                    {/* Recently Cited Content */}
+                    <div style={{ flex: 1 }}>
+                        <h2 style={{ fontSize: '24px', fontFamily: 'serif', color: '#4b3342', marginBottom: '8px' }}>Recently Cited</h2>
+                        <p style={{ color: '#949494', fontSize: '12px', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                            The student pieces featured below have been recently cited in judicial opinions and legal scholarship.
+                        </p>
 
-                            <div className="space-y-4">
-                                {recentlyCited.map((item, index) => (
-                                    <div key={index} className="flex">
-                                        <div className="bg-[#771313] px-3 py-2 flex-shrink-0">
-                                            <p className="text-white text-[8px] font-bold tracking-wide">{item.category}</p>
-                                            <p className="text-white text-[8px]">LEADING CASE</p>
-                                            <p className="text-white text-xs font-serif italic mt-1">{item.title}</p>
-                                        </div>
-                                        <div className="bg-gray-100 flex-1"></div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            {recentlyCited.map((item, index) => (
+                                <div key={index} style={{ display: 'flex' }}>
+                                    <div style={{ backgroundColor: '#771313', padding: '12px', flexShrink: 0 }}>
+                                        <p style={{ color: 'white', fontSize: '8px', fontWeight: 'bold', letterSpacing: '0.05em' }}>{item.category}</p>
+                                        <p style={{ color: 'white', fontSize: '8px' }}>LEADING CASE</p>
+                                        <p style={{ color: 'white', fontSize: '12px', fontFamily: 'serif', fontStyle: 'italic', marginTop: '4px' }}>{item.title}</p>
                                     </div>
-                                ))}
-                            </div>
+                                    <div style={{ backgroundColor: '#f0f0f0', flex: 1 }}></div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
